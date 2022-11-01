@@ -207,6 +207,9 @@ Examples:
 encryptThis("Hello") === "72olle"
 encryptThis("good") === "103doo"
 encryptThis("hello world") === "104olle 119drlo"
+encryptThis("A wise old owl lived in an oak")=== "65 119esi 111dl 111lw 108dvei 105n 97n 111ka");
+encryptThis("The more he saw the less he spoke")=== "84eh 109ero 104e 115wa 116eh 108sse 104e 115eokp");
+encryptThis("The less he spoke the more he heard")=== "84eh 108sse 104e 115eokp 116eh 109ero 104e 104dar
 */
 
 const encryption = (text) => {
