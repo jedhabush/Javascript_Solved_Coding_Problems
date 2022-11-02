@@ -245,7 +245,7 @@ console.log(encryption("Thank you Piotr for all your help"));
 
 //--------------------- Problem 9 ----------------------------
 /*
-reate a function that transforms any positive number to a string representing the number in words. The function should work for all numbers between 0 and 999999.
+Create a function that transforms any positive number to a string representing the number in words. The function should work for all numbers between 0 and 999999.
 ---------
 EXAMPLES:
 number2words(0)  ==>  "zero"
