@@ -12,7 +12,7 @@ EXAMPLES: <br/>
 ```javascript
 function fakeBin(x) {
   let result = "";
-  for (i = 0; i < x.length; i++) {
+  for (let i = 0; i < x.length; i++) {
     //console.log(x);
     result += x[i] >= "5" ? x[i].replace(x[i], "1") : "0";
   }
