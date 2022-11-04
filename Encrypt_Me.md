@@ -49,3 +49,35 @@ const encryption = (text) => {
 
 console.log(encryption("Thank you Piotr for all your help")); 
 ```
+
+**Unit Testing:**
+
+```javascript
+import { encryption } from "./functionsToTest";
+
+describe("Testing Encryption function", () => {
+  it("Should convert the first letter to its ASCII code", () => {
+    expect(encryption("Hello")).toEqual("72olle");
+    expect(encryption("good")).toEqual("103doo");
+    expect(encryption("world")).toEqual("119drlo");
+    expect(encryption("A")).toEqual("65");
+  });
+  it("Should switch the second letter with the last letter", () => {
+    expect(encryption("wise")).toEqual("119esi");
+    expect(encryption("The")).toEqual("84eh");
+    expect(encryption("saw")).toEqual("115wa");
+  });
+  it("Should be able to encrypt long strings", () => {
+    expect(encryption("A wise old owl lived in an oak")).toEqual(
+      "65 119esi 111dl 111lw 108dvei 105n 97n 111ka"
+    );
+    expect(encryption("Thank you Piotr for all your help")).toEqual(
+      "84kanh 121uo 80roti 102ro 97ll 121ruo 104ple"
+    );
+    expect(encryption("Why can we not all be like that wise old bird")).toEqual(
+      "87yh 99na 119e 110to 97ll 98e 108eki 116tah 119esi 111dl 98dri"
+    );
+  });
+});
+```
+
