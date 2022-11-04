@@ -25,3 +25,33 @@ const accum = (str) => {
 
 console.log(accum("RqaEzty")); 
 ```
+
+**Unit Testing:**
+
+```javascript
+import { accum } from "./functionsToTest";
+
+describe("Testing accum function", () => {
+  it("Should capitalize the letters then repeat them as many times according to their poision in the string seperated by - between each letter", () => {
+    expect(accum("abcd")).toBe("A-Bb-Ccc-Dddd");
+    expect(accum("RqaEzty")).toBe("R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy");
+    expect(accum("cwAt")).toBe("C-Ww-Aaa-Tttt");
+    expect(accum("JedHabush")).toBe(
+      "J-Ee-Ddd-Hhhh-Aaaaa-Bbbbbb-Uuuuuuu-Ssssssss-Hhhhhhhhh"
+    );
+  });
+
+  it("Should return an empty STRING when there's no input (EMPTY)", () => {
+    expect(accum("")).toBe("");
+  });
+
+  it("Should repeat numbers as many times according to their position in the string of numbers seperated by - between each number/s", () => {
+    expect(accum("5641")).toBe("5-66-444-1111");
+    expect(accum("87777")).toBe("8-77-777-7777-77777");
+    expect(accum("10")).toBe("1-00");
+    expect(accum("44551234")).toBe(
+      "4-44-555-5555-11111-222222-3333333-44444444"
+    );
+  });
+});
+```
