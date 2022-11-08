@@ -39,7 +39,7 @@ console.log(XO("zpzpzpp"));
 import { XO } from "./functionsToTest";
 
 describe("Testing the XO function", () => {
-  it("should return TRUE if if a string has the same amount of 'x's and 'o's", () => {
+  it("should return TRUE if a string has the same amount of 'x's and 'o's", () => {
     expect(XO("xxo")).toBe(false);
     expect(XO("xxxooo")).toBe(true);
     expect(XO("zjjjjozjjjjodjjdjxx")).toBe(true);
