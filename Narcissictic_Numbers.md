@@ -31,3 +31,29 @@ const basePower = (num) => {
 
 console.log(basePower(15));
 ```
+
+**Unit Testing:**
+
+```javascript
+import { basePower } from "./functionsToTest";
+
+describe("Testing the basePower function", () => {
+  it("should evaluate TRUE if the input is a Narcissistic Number", () => {
+    expect(basePower(153)).toBe(true);
+    expect(basePower(370)).toBe(true);
+    expect(basePower(371)).toBe(true);
+    expect(basePower(407)).toBe(true);
+    expect(basePower(1634)).toBe(true);
+    expect(basePower(9926315)).toBe(true);
+    expect(basePower(4679307774)).toBe(true);
+  });
+
+  it("should evaluate FALSE if the input is  NOT a Narcissistic Number", () => {
+    expect(basePower(159)).toBe(false);
+    expect(basePower(4679307777)).toBe(false);
+    expect(basePower(4210838)).toBe(false);
+    expect(basePower(8207)).toBe(false);
+    expect(basePower(9475)).toBe(false);
+  });
+});
+```
