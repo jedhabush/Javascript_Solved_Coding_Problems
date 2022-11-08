@@ -28,7 +28,7 @@ console.log(remove(`lw0g0`));
 import { remove } from "./functionsToTest";
 
 describe("Testing the remove function", () => {
-  it("should transforms any positive number to a string representing the number in words", () => {
+  it("should create a function that removes the first and last characters of a string", () => {
     expect(remove("eloquent")).toBe("loquen");
     expect(remove("country")).toBe("ountr");
     expect(remove("Jed")).toBe("e");
