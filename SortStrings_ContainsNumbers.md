@@ -39,7 +39,7 @@ console.log(order(""));
 import { order } from "./functionsToTest";
 
 describe("Testing the order function", () => {
-  it("should sorts each word in the string that contains a single number. This number is the position the word should have in the result", () => {
+  it("should sort each word in the string that contains a single number. This number is the position the word should have in the result", () => {
     expect(order("is2 Thi1s T4est 3a")).toBe("Thi1s is2 3a T4est");
     expect(order("can1 y2ou s3pell")).toBe("can1 y2ou s3pell");
     expect(order("ca2n good5 a4 I1 p6rogrammer be3")).toBe(
