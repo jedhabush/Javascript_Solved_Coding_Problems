@@ -21,3 +21,21 @@ const remove = (str) => {
 
 console.log(remove(`lw0g0`));
 ```
+
+**Unit Testing:**
+
+```javascript
+import { remove } from "./functionsToTest";
+
+describe("Testing the remove function", () => {
+  it("should transforms any positive number to a string representing the number in words", () => {
+    expect(remove("eloquent")).toBe("loquen");
+    expect(remove("country")).toBe("ountr");
+    expect(remove("Jed")).toBe("e");
+    expect(remove("boss")).toBe("os");
+    expect(remove("computer")).toBe("ompute");
+    expect(remove("consequences")).toBe("onsequence");
+    expect(remove("butter")).toBe("utte");
+  });
+});
+```
