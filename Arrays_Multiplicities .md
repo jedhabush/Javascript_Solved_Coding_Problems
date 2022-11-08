@@ -51,3 +51,54 @@ console.log(
   )
 );
 ```
+
+**Unit Testing:**
+
+```javascript
+import { comp } from "./functionsToTest";
+
+describe("Testing the comp  function", () => {
+  it("should check whether the two arrays have the - same - elements, with the same multiplicities", () => {
+    expect(
+      comp([10000000, 100000000], [100000000000000, 10000000000000000])
+    ).toBe(true);
+    expect(comp([2, 2, 3], [4, 9, 9])).toBe(false);
+    expect(comp([4, 4], [1, 31])).toBe(false);
+    expect(
+      comp(
+        [9, 8, 0, 0, 7, 6, 2, 6, 10, 2, 2, 10, 8, 0, 2, 2],
+        [100, 64, 0, 1, 0, 36, 81, 4, 4, 36, 100, 49, 4, 64, 4, 4]
+      )
+    ).toBe(false);
+    expect(comp(null, null)).toBe(false);
+    expect(
+      comp(
+        [2, 10, 9, 8, 1, 10, 0, 9, 3, 8, 4, 6, 10, 1, 5, 8, 0, 4, 5, 5, 7, 1],
+        [
+          16, 81, 100, 4, 64, 0, 64, 81, 1, 25, 9, 1, 49, 1, 64, 0, 100, 16, 25,
+          25, 36, 100,
+        ]
+      )
+    ).toBe(true);
+    expect(
+      comp(
+        [8, 4, 8, 0, 5, 9, 1, 2, 10, 7, 6, 10, 2, 9, 8, 5, 6, 3, 6, 2, 6],
+        [
+          9, 4, 81, 1, 36, 36, 100, 64, 4, 16, 81, 64, 49, 64, 36, 25, 100, 36,
+          25, 0, 4,
+        ]
+      )
+    ).toBe(true);
+    expect(
+      comp(
+        [3, 6, 2, 5, 3, 9, 4, 2, 10, 0, 4, 0, 10, 10, 6, 6, 2, 10, 9, 2],
+        [
+          4, 4, 16, 16, 36, 100, 9, 9, 100, 81, 4, 100, 4, 36, 0, 100, 36, 81,
+          25, 0,
+        ]
+      )
+    ).toBe(true);
+  });
+});
+```
+
