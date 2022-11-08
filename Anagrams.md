@@ -27,3 +27,31 @@ const anagrams = (strA, strB) => {
 
 console.log(anagrams("heart", "earth"));
 ```
+
+**Unit Testing:**
+
+```javascript
+import {anagrams} from "./functionsToTest";
+
+describe("Testing Anagrams function", () => {
+  it("should evaluate TRUE if the input as anagram", () => {
+    expect(anagrams("below", "elbow")).toBe(true);
+    expect(anagrams("study", "dusty")).toBe(true);
+    expect(anagrams("night", "thing")).toBe(true);
+    expect(anagrams("act", "cat")).toBe(true);
+    expect(anagrams("bare", "bear")).toBe(true);
+    expect(anagrams("gainly", "laying")).toBe(true);
+    expect(anagrams("pear", "reap")).toBe(true);
+  });
+
+  it("should evaluate FALSE if the input as anagrams", () => {
+    expect(anagrams("dog", "dogs")).toBe(false);
+    expect(anagrams("buddy", "juddy")).toBe(false);
+    expect(anagrams("sigh", "light")).toBe(false);
+    expect(anagrams("risk", "risks")).toBe(false);
+    expect(anagrams("jam", "jaron")).toBe(false);
+    expect(anagrams("mom", "om")).toBe(false);
+    expect(anagrams("back", "cap")).toBe(false);
+  });
+});
+```
