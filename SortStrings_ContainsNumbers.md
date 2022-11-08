@@ -32,3 +32,26 @@ const order = (str) => {
 
 console.log(order("")); 
 ```
+
+**Unit Testing:**
+
+```javascript
+import { order } from "./functionsToTest";
+
+describe("Testing the order function", () => {
+  it("should sorts each word in the string that contains a single number. This number is the position the word should have in the result", () => {
+    expect(order("is2 Thi1s T4est 3a")).toBe("Thi1s is2 3a T4est");
+    expect(order("can1 y2ou s3pell")).toBe("can1 y2ou s3pell");
+    expect(order("ca2n good5 a4 I1 p6rogrammer be3")).toBe(
+      "I1 ca2n be3 a4 good5 p6rogrammer"
+    );
+    expect(order("h3o m2 t4 impr5ve te1ll")).toBe("te1ll m2 h3o t4 impr5ve");
+    expect(order("f6ench i2 in5 yo3ur na4me  wha1")).toBe(
+      "wha1 i2 yo3ur na4me in5 f6ench"
+    );
+    expect(order("for4 co1ding an7d is2 sou8l healthy3  your5 mind6 ")).toBe(
+      "co1ding is2 healthy3 for4 your5 mind6 an7d sou8l"
+    );
+  });
+});
+```
