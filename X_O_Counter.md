@@ -32,3 +32,21 @@ const XO = (str) => {
 
 console.log(XO("zpzpzpp"));
 ```
+
+**Unit Testing:**
+
+```javascript
+import { XO } from "./functionsToTest";
+
+describe("Testing the XO function", () => {
+  it("should return TRUE if if a string has the same amount of 'x's and 'o's", () => {
+    expect(XO("xxo")).toBe(false);
+    expect(XO("xxxooo")).toBe(true);
+    expect(XO("zjjjjozjjjjodjjdjxx")).toBe(true);
+    expect(XO("aaaossdddofffooaaaaxxhhhhhxx")).toBe(true);
+    expect(XO("iiiiiiiioiiiiiioiiixxiiiiiio")).toBe(false);
+    expect(XO("oopppppoppppxxxppppoppppx")).toBe(true);
+  });
+});
+```
+
