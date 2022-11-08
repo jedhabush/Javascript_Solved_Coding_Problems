@@ -79,7 +79,7 @@ const numbersToWords = (number) => {
     return (
       numbersA[Math.floor(number / 100)] +
       " hundred" +
-      (number % 100 === 0 ? "" : "-" + numbersToWords(number % 100))
+      (number % 100 === 0 ? "" : " " + numbersToWords(number % 100))
     );
   } else {
     return (
@@ -91,4 +91,26 @@ const numbersToWords = (number) => {
 };
 
 console.log(numbersToWords(8003));
+```
+
+**Unit Testing:**
+
+```javascript
+import { numbersToWords } from "./functionsToTest";
+
+describe("Testing the numbersToWords function", () => {
+  it("should transforms any positive number to a string representing the number in words", () => {
+    expect(numbersToWords(301)).toBe("three hundred one");
+    expect(numbersToWords(800)).toBe("eight hundred");
+    expect(numbersToWords(1000)).toBe("one thousand");
+    expect(numbersToWords(3051)).toBe("three thousand fifty-one");
+    expect(numbersToWords(7200)).toBe("seven thousand two hundred");
+    expect(numbersToWords(99999)).toBe(
+      "ninety-nine thousand nine hundred ninety-nine"
+    );
+    expect(numbersToWords(888888)).toBe(
+      "eight hundred eighty-eight thousand eight hundred eighty-eight"
+    );
+  });
+});
 ```
