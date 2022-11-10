@@ -18,7 +18,7 @@ Output: -2.398 <br/>
 
 ```javascript
 const sumOfArray = (numbers) => {
-  //if (numbers.length === 0) return 0;
+  
   return numbers.reduce((a, b) => a + b, 0);
 };
 
